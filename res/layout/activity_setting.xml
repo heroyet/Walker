@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="@color/skyblue" >
+    
+    <!-- 使用帮助 -->
+              <cn.edu.bzu.util.RevealLayout
+                  android:id="@+id/help"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content" > 
+			<LinearLayout
+			    android:id="@+id/soft_help"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/setting_select"
+			    android:layout_marginTop="20dp"
+			    android:orientation="horizontal" >
+			    <ImageView 
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:contentDescription="@string/icons_setting_img_text"
+			        android:src="@drawable/icons_soft_help"
+			        android:layout_marginLeft="30dp"
+			        android:layout_marginTop="10dp"
+			        android:layout_marginBottom="10dp"/>
+			    <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/soft_help_text"
+			        android:layout_marginTop="12dp"
+			        android:layout_marginLeft="30dp"
+			        android:layout_marginBottom="10dp"
+			        android:textSize="15sp" />
+			</LinearLayout>
+			</cn.edu.bzu.util.RevealLayout>
+   <!-- 团队介绍 -->
+       <cn.edu.bzu.util.RevealLayout
+                android:id="@+id/team"
+                android:layout_below="@id/help"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" > 
+   			<LinearLayout
+			    android:id="@+id/soft_team"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/setting_select"
+			    android:layout_marginTop="10dp"
+			    android:layout_below="@id/help"
+			    android:orientation="horizontal" >
+			    <ImageView 
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:contentDescription="@string/icons_setting_img_text"
+			        android:src="@drawable/icons_soft_team"
+			        android:layout_marginLeft="30dp"
+			        android:layout_marginTop="10dp"
+			        android:layout_marginBottom="10dp"/>
+			    <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/soft_team_text"
+			        android:layout_marginTop="12dp"
+			        android:layout_marginLeft="30dp"
+			        android:layout_marginBottom="10dp"
+			        android:textSize="15sp" />
+			</LinearLayout>
+	</cn.edu.bzu.util.RevealLayout>
+   <!-- 版本信息 -->
+   
+      <cn.edu.bzu.util.RevealLayout
+                android:id="@+id/version"
+                android:layout_below="@id/team"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" > 
+   <LinearLayout
+			    android:id="@+id/soft_version"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/setting_select"
+			    android:layout_marginTop="30dp"
+			    android:layout_below="@id/team"
+			    android:orientation="horizontal" >
+			    <ImageView 
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:contentDescription="@string/icons_setting_img_text"
+			        android:src="@drawable/icons_soft_version"
+			        android:layout_marginLeft="30dp"
+			        android:layout_marginTop="10dp"
+			        android:layout_marginBottom="10dp"/>
+			    <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/soft_version_text"
+			        android:layout_marginTop="12dp"
+			        android:layout_marginLeft="30dp"
+			        android:layout_marginBottom="10dp"
+			        android:textSize="15sp" />
+			</LinearLayout>
+</cn.edu.bzu.util.RevealLayout>			
+<!-- 检查更新 -->
+      <cn.edu.bzu.util.RevealLayout
+                android:id="@+id/update"
+                android:layout_below="@id/version"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" > 
+<LinearLayout
+			    android:id="@+id/soft_update"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/setting_select"
+			    android:layout_marginTop="10dp"
+			    android:layout_below="@id/version"
+			    android:orientation="horizontal" >
+			    <ImageView 
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:contentDescription="@string/icons_setting_img_text"
+			        android:src="@drawable/icons_soft_update"
+			        android:layout_marginLeft="30dp"
+			        android:layout_marginTop="10dp"
+			        android:layout_marginBottom="10dp"/>
+			    <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/soft_update_text"
+			        android:layout_marginTop="12dp"
+			        android:layout_marginLeft="30dp"
+			        android:layout_marginBottom="10dp"
+			        android:textSize="15sp" />
+			</LinearLayout>
+</cn.edu.bzu.util.RevealLayout>
+<!-- 意见反馈 -->
+      <cn.edu.bzu.util.RevealLayout
+                android:id="@+id/advice"
+                android:layout_below="@id/update"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" > 
+<LinearLayout
+			    android:id="@+id/soft_advice"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			   android:background="@drawable/setting_select"
+			    android:layout_marginTop="10dp"
+			    android:layout_below="@id/soft_update"
+			    android:orientation="horizontal" >
+			    <ImageView 
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:contentDescription="@string/icons_setting_img_text"
+			        android:src="@drawable/icons_soft_advice"
+			        android:layout_marginLeft="30dp"
+			        android:layout_marginTop="10dp"
+			        android:layout_marginBottom="10dp"/>
+			    <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/soft_advice_text"
+			        android:layout_marginTop="12dp"
+			        android:layout_marginLeft="30dp"
+			        android:layout_marginBottom="10dp"
+			        android:textSize="15sp" />
+			</LinearLayout>
+</cn.edu.bzu.util.RevealLayout>			
+<!-- 注销 -->
+          <cn.edu.bzu.util.RevealLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content" 
+			        android:layout_gravity="bottom" 
+			        android:layout_marginLeft="10dp" 
+			        android:layout_marginRight="10dp"
+			        android:layout_alignParentBottom="true"
+			        android:background="#60ffffff"> 
+				<Button 
+				    android:id="@+id/loginout"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:text="@string/soft_loginout_text"
+				    android:textColor="@color/white"
+				    android:background="@drawable/loginout_btn_select"
+				    android:layout_marginBottom="10dp"/>
+		</cn.edu.bzu.util.RevealLayout>
+</RelativeLayout>

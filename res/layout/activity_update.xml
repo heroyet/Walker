@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/graywhite" >
+    	<!-- 标题栏区域 -->
+	  		<include   layout="@layout/update_layout_title_bar" />
+	  <!-- 下面的编辑信息区域为一个ScrollView显示的区域 -->
+
+	  <ScrollView 
+	      android:layout_width="match_parent"
+	      android:layout_height="match_parent">
+	      	  <!-- 为了显示分割线等原因，所以内部放置一个RelativeLayout布局 -->
+	      			<LinearLayout
+	      			    android:layout_width="match_parent"
+	      			    android:layout_height="wrap_content"
+	      			    android:orientation="vertical">
+	      			    <!-- 昵称显示 -->
+	      			    <View 
+	      			        android:layout_width="match_parent"
+	      			        android:layout_height="0.5dp"
+	      			        android:layout_marginTop="15dp"
+	      			        android:background="@drawable/update_drivide_shape"/>
+		      			    	<LinearLayout 
+		      			    	    android:layout_width="match_parent"
+		      			    	    android:layout_height="wrap_content"
+		      			    	    android:orientation="horizontal"
+		      			    	    android:background="@color/white">
+			      			    	     <TextView 
+								              android:layout_width="wrap_content"
+								              android:layout_height="wrap_content"
+								              android:text="@string/tv_nick_text"
+								             android:layout_margin="10dp"
+							                 android:textSize="15sp"/>
+								          <EditText 
+								              android:id="@+id/edt_update_nick"
+								              android:layout_width="match_parent"
+								              android:layout_height="wrap_content"
+								              android:layout_margin="10sp"
+								              android:background="@null"
+								              android:inputType="text"/>
+	      			    	</LinearLayout>
+	      			    <View 
+	      			        android:layout_width="match_parent"
+	      			        android:layout_height="0.5dp"
+	      			        android:background="@drawable/update_drivide_shape"/>
+	      			    
+	      			    <!-- 城市显示 -->
+	      			    <View 
+	      			        android:layout_width="match_parent"
+	      			        android:layout_height="0.5dp"
+	      			        android:layout_marginTop="10dp"
+	      			        android:background="@drawable/update_drivide_shape"/>
+		      			    	<LinearLayout 
+		      			    	    android:layout_width="match_parent"
+		      			    	    android:layout_height="wrap_content"
+		      			    	    android:orientation="horizontal"
+		      			    	    android:background="@color/white">
+			      			    	     <TextView 
+								              android:layout_width="wrap_content"
+								              android:layout_height="wrap_content"
+								              android:text="@string/edt_test_city_text"
+								             android:layout_margin="10dp"
+							                 android:textSize="15sp"/>
+								          <EditText 
+								              android:id="@+id/edt_update_city"
+								              android:layout_width="match_parent"
+								              android:layout_height="wrap_content"
+								              android:layout_margin="10sp"
+								              android:background="@null"
+								              android:inputType="text"/>
+	      			    	</LinearLayout>
+	      			    <View 
+	      			        android:layout_width="match_parent"
+	      			        android:layout_height="0.5dp"
+	      			        android:background="@drawable/update_drivide_shape"/>	      			    
+
+	      			    <!-- 座右铭 -->	      			    
+ 						<View 
+	      			        android:layout_width="match_parent"
+	      			        android:layout_height="0.5dp"
+	      			        android:layout_marginTop="10dp"
+	      			        android:background="@drawable/update_drivide_shape"/>
+		      			    	<LinearLayout 
+		      			    	    android:layout_width="match_parent"
+		      			    	    android:layout_height="wrap_content"
+		      			    	    android:orientation="horizontal"
+		      			    	    android:background="@color/white">
+			      			    	     <TextView 
+								              android:layout_width="wrap_content"
+								              android:layout_height="wrap_content"
+								              android:text="@string/tv_motto"
+								             android:layout_margin="10dp"
+							                 android:textSize="15sp"/>
+								          <EditText 
+								              android:id="@+id/edt_update_motto"
+								              android:layout_width="match_parent"
+								              android:layout_height="wrap_content"
+								              android:layout_margin="10sp"
+								              android:background="@null"
+								              android:inputType="text"/>
+	      			    	</LinearLayout>
+	      			    <View 
+	      			        android:layout_width="match_parent"
+	      			        android:layout_height="0.5dp"
+	      			        android:background="@drawable/update_drivide_shape"/>	
+
+  				<!-- 步长 -->	      			    
+ 						<View 
+	      			        android:layout_width="match_parent"
+	      			        android:layout_height="0.5dp"
+	      			        android:layout_marginTop="20dp"
+	      			        android:background="@drawable/update_drivide_shape"/>
+		      			    	<LinearLayout 
+		      			    	    android:layout_width="match_parent"
+		      			    	    android:layout_height="wrap_content"
+		      			    	    android:orientation="horizontal"
+		      			    	    android:background="@color/white">
+			      			    	     <TextView 
+								              android:layout_width="wrap_content"
+								              android:layout_height="wrap_content"
+								              android:text="@string/tv_stepLenth_text"
+								             android:layout_margin="10dp"
+							                 android:textSize="15sp"/>
+								          <EditText 
+								              android:id="@+id/edt_update_stepLength"
+								              android:layout_width="match_parent"
+								              android:layout_height="wrap_content"
+								              android:layout_margin="10sp"
+								              android:background="@null"
+								              android:inputType="number"/>
+	      			    	</LinearLayout>
+	      			    <View 
+	      			        android:layout_width="match_parent"
+	      			        android:layout_height="0.5dp"
+	      			        android:background="@drawable/update_drivide_shape"/>	 
+	      			        
+
+  				<!-- 身高 -->	      			    
+ 						<View 
+	      			        android:layout_width="match_parent"
+	      			        android:layout_height="0.5dp"
+	      			        android:layout_marginTop="10dp"
+	      			        android:background="@drawable/update_drivide_shape"/>
+		      			    	<LinearLayout 
+		      			    	    android:layout_width="match_parent"
+		      			    	    android:layout_height="wrap_content"
+		      			    	    android:orientation="horizontal"
+		      			    	    android:background="@color/white">
+			      			    	     <TextView 
+								              android:layout_width="wrap_content"
+								              android:layout_height="wrap_content"
+								              android:text="@string/tv_height_text"
+								             android:layout_margin="10dp"
+							                 android:textSize="15sp"/>
+								          <EditText 
+								              android:id="@+id/edt_update_height"
+								              android:layout_width="match_parent"
+								              android:layout_height="wrap_content"
+								              android:layout_margin="10sp"
+								              android:background="@null"
+								              android:inputType="number"/>
+	      			    	</LinearLayout>
+	      			    <View 
+	      			        android:layout_width="match_parent"
+	      			        android:layout_height="0.5dp"
+	      			        android:background="@drawable/update_drivide_shape"/>	     	
+
+	      			    <!-- 体重 -->
+	    
+ 						<View 
+	      			        android:layout_width="match_parent"
+	      			        android:layout_height="0.5dp"
+	      			        android:layout_marginTop="10dp"
+	      			        android:background="@drawable/update_drivide_shape"/>
+		      			    	<LinearLayout 
+		      			    	    android:layout_width="match_parent"
+		      			    	    android:layout_height="wrap_content"
+		      			    	    android:orientation="horizontal"
+		      			    	    android:background="@color/white">
+			      			    	     <TextView 
+								              android:layout_width="wrap_content"
+								              android:layout_height="wrap_content"
+								              android:text="@string/tv_weight_text"
+								             android:layout_margin="10dp"
+							                 android:textSize="15sp"/>
+								          <EditText 
+								              android:id="@+id/edt_update_weight"
+								              android:layout_width="match_parent"
+								              android:layout_height="wrap_content"
+								              android:layout_margin="10sp"
+								              android:background="@null"
+								              android:inputType="number"/>
+	      			    	</LinearLayout>
+	      			    <View 
+	      			        android:layout_width="match_parent"
+	      			        android:layout_height="0.5dp"
+	      			        android:background="@drawable/update_drivide_shape"/>	    
+	      			        
+  				 <!-- 期望运动量 -->
+	    
+ 						<View 
+	      			        android:layout_width="match_parent"
+	      			        android:layout_height="0.5dp"
+	      			        android:layout_marginTop="10dp"
+	      			        android:background="@drawable/update_drivide_shape"/>
+		      			    	<LinearLayout 
+		      			    	    android:layout_width="match_parent"
+		      			    	    android:layout_height="wrap_content"
+		      			    	    android:orientation="horizontal"
+		      			    	    android:background="@color/white">
+			      			    	     <TextView 
+								              android:layout_width="wrap_content"
+								              android:layout_height="wrap_content"
+								              android:text="@string/tv_future_text"
+								             android:layout_margin="10dp"
+							                 android:textSize="15sp"/>
+								          <EditText 
+								              android:id="@+id/edt_update_feather"
+								              android:layout_width="match_parent"
+								              android:layout_height="wrap_content"
+								              android:layout_margin="10sp"
+								              android:background="@null"
+								              android:inputType="number"/>
+	      			    	</LinearLayout>
+	      			    <View 
+	      			        android:layout_width="match_parent"
+	      			        android:layout_height="0.5dp"
+	      			        android:background="@drawable/update_drivide_shape"/>	     	     			     		    
+	      			</LinearLayout>
+	      
+	      
+	  </ScrollView>
+	  
+	  
+</LinearLayout>

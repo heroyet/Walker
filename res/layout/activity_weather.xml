@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/sport_bg_sunny">
+    
+	<EditText 
+	    android:id="@+id/edt_city"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	   android:background="@android:drawable/edit_text"
+	   android:inputType="text"
+	   android:hint="@string/edt_city_text"
+	   android:layout_marginTop="10dp"
+	   android:layout_marginLeft="10dp"
+	   android:layout_marginRight="10dp"
+	   android:drawablePadding="5dp"
+	   android:drawableLeft="@drawable/icons_weather_city"/>
+
+	<Button 
+	    android:id="@+id/btn_search"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	   android:layout_marginLeft="10dp"
+	   android:layout_marginRight="10dp"
+	   android:layout_marginTop="5dp"
+	   android:layout_below="@id/edt_city"
+	   android:background="@drawable/btn_select"
+	   android:text="@string/btn_weather_text"/>
+	<ListView 
+	    android:id="@+id/list_weather"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@id/btn_search"
+	    android:dividerHeight="4dp"
+	    android:background="@drawable/list_shape"
+	    android:layout_margin="10dp"/>
+</RelativeLayout>

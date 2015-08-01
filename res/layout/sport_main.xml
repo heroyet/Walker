@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/_bg_sport">
+    
+    <!-- 定位城市 -->
+	<TextView 
+	    android:id="@+id/tv_city"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:textSize="20sp"
+	    android:layout_marginTop="10dp"
+	    android:gravity="center_horizontal"/>
+	
+	<ImageView
+	    android:id="@+id/img_child"
+	    android:layout_width="wrap_content"
+	    android:layout_height="200dp"
+	    android:layout_alignParentRight="true"
+	    android:layout_below="@id/tv_city"
+	    android:layout_marginRight="50dp"
+	    android:layout_marginTop="25dp"
+	    android:contentDescription="@string/sport_test_city_text"
+	    android:src="@drawable/icons_sport_child" />
+	
+	<!-- 显示温度 -->
+	<TextView 
+	    android:id="@+id/tv_temper"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textSize="20sp"
+	    android:textStyle="bold"
+	    android:layout_marginTop="50dp"
+	    android:layout_marginLeft="45dp"
+	    android:layout_below="@id/tv_city"/>
+	
+	<!-- 显示星期 -->
+	<TextView 
+	    android:id="@+id/tv_week"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textSize="15sp"
+	    android:layout_alignLeft="@id/tv_temper"
+	    android:layout_marginTop="10dp"
+	    android:layout_below="@id/tv_temper"/>
+	
+	<!-- 显示天气图标 -->
+	
+		<!-- 显示天气情况 -->
+		<TextView
+	    android:id="@+id/tv_weather"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/tv_week"
+	    android:layout_alignLeft="@id/tv_week"
+	    android:layout_marginTop="10dp"
+	    android:textSize="15sp" />
+	
+
+
+	<!-- 相关的运动操作 -->
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:orientation="horizontal">
+	    
+	    <TextView 
+        android:id="@+id/sport_heart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sport_test_walk_text"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:clickable="true"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/sport_start_select"
+        android:textColor="#FFFFFF"/>
+    <TextView 
+        android:id="@+id/sport_walk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sport_test_bike_text"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:clickable="true"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+         android:layout_marginBottom="10dp"
+        android:background="@drawable/sport_start_select"
+        android:textColor="#FFFFFF"/>
+   <TextView 
+        android:id="@+id/sport_notepad"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="@string/sport_test_note_text"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:clickable="true"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/sport_start_select"
+        android:textColor="#FFFFFF"/>
+	</LinearLayout>
+
+
+
+</RelativeLayout>

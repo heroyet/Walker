@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+	<include
+	    android:id="@+id/layout" 
+	    layout="@layout/team_common_layout_title_bar"/>
+
+	<ImageView 
+	    android:id="@+id/us"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:contentDescription="@string/soft_team_text"
+	    android:layout_below="@id/layout"
+	    android:layout_marginTop="25dp"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginRight="20dp"
+	    android:src="@drawable/test_us"/>
+	
+	<TextView 
+	    android:id="@+id/us_intro"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/team_intro"
+	    android:layout_below="@id/us"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginTop="15dp"
+	    android:layout_marginRight="20dp"/>
+	
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/us_intro"
+	    android:gravity="bottom"
+	    android:layout_alignParentBottom="true" >
+		<TextView 
+		    android:id="@+id/walker"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="@string/soft_name"
+		    android:textSize="30sp"
+		    android:gravity="center_horizontal"
+		    android:textColor="#2F9DF2"/>
+		
+		<TextView 
+		    android:id="@+id/version"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="@string/soft_version"
+		    android:layout_marginTop="10dp"
+		    android:textColor="#8E8E8E"
+		    android:layout_below="@id/walker"
+		    android:gravity="center_horizontal"/>
+		<TextView 
+		    android:id="@+id/url"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="@string/soft_url"
+		    android:layout_below="@id/version"
+		    android:layout_marginTop="5dp"
+		    android:gravity="center_horizontal"/>
+		<TextView 
+		    android:id="@+id/power"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="@string/soft_power"
+		    android:layout_below="@id/url"
+		    android:layout_marginBottom="10dp"
+		    android:layout_marginTop="5dp"
+		    android:gravity="center_horizontal"/>
+	</RelativeLayout>
+</RelativeLayout>

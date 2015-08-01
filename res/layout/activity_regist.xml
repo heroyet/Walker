@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/loginbg">
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+	     <com.makeramen.roundedimageview.RoundedImageView
+		        xmlns:app="http://schemas.android.com/apk/res-auto"
+		        android:id="@+id/img_user_photo"
+		        android:layout_width="80dp"
+		        android:layout_height="80dp"
+		        android:src="@drawable/test_photo"
+		        app:riv_corner_radius="30dip"
+		        app:riv_border_width="2dip"
+		        android:layout_marginTop="8dp"
+		        app:riv_border_color="#333333"
+		        android:layout_marginBottom="5dp"
+		        app:riv_mutate_background="true"
+		        app:riv_oval="true" />
+
+	    	<TextView 
+	    	    android:id="@+id/tv_change_photo"
+	    	    android:layout_width="wrap_content"
+	    	    android:layout_height="wrap_content"
+	    	    android:text="@string/tv_change_photo_text"/>
+
+	   		<!-- 用户资料区域 -->
+	   		<!-- 账号 -->
+	   		<EditText 
+	   		    android:id="@+id/edt_userName"
+	   		    android:layout_width="match_parent"
+	   		    android:layout_height="wrap_content"
+	   		    android:drawableLeft="@drawable/icons_inform_user"
+	   		    android:background="@android:drawable/edit_text"
+	   		    android:layout_marginTop="5dp"
+	   		    android:layout_marginLeft="10dp" 
+	   		    android:hint="@string/edt_userName"
+	   		    android:inputType="textPhonetic"
+	   		    android:layout_marginRight="10dp"/>
+	   		<!--昵称-->
+	   		<EditText 
+	   		    android:id="@+id/edt_nick"
+	   		    android:layout_width="match_parent"
+	   		    android:layout_height="wrap_content"
+	   		    android:drawableLeft="@drawable/icons_infom_nick"
+	   		    android:background="@android:drawable/edit_text"
+	   		    android:layout_marginTop="5dp"
+	   		    android:layout_marginLeft="10dp" 
+	   		    android:hint="@string/edt_nick_text"
+	   		    android:inputType="text"
+	   		    android:layout_marginRight="10dp"/> 	
+	   		    <!-- 密码 -->
+	      <EditText 
+	   		    android:id="@+id/edt_pass"
+	   		    android:layout_width="match_parent"
+	   		    android:layout_height="wrap_content"
+	   		    android:drawableLeft="@drawable/icons_inform_pass"
+	   		    android:background="@android:drawable/edit_text"
+	   		    android:layout_marginTop="5dp"
+	   		    android:layout_marginLeft="10dp"
+	   		    android:inputType="textPassword" 
+	   		    android:hint="@string/edt_pass_text"
+	   		    android:layout_marginRight="10dp"/>
+	   		    <!-- 座右铭 -->
+		 	<EditText 
+	   		    android:id="@+id/edt_motto"
+	   		    android:layout_width="match_parent"
+	   		    android:layout_height="wrap_content"
+	   		    android:drawableLeft="@drawable/icons_inform_motto"
+	   		    android:background="@android:drawable/edit_text"
+	   		    android:layout_marginTop="5dp"
+	   		    android:layout_marginLeft="10dp" 
+	   		    android:inputType="text"
+	   		    android:hint="@string/edt_motto_text"
+	   		    android:layout_marginRight="10dp"/> 	
+	   		    <!-- email -->
+		   	<EditText 
+	   		    android:id="@+id/edt_email"
+	   		    android:layout_width="match_parent"
+	   		    android:layout_height="wrap_content"
+	   		    android:drawableLeft="@drawable/icons_inform_email"
+	   		    android:background="@android:drawable/edit_text"
+	   		    android:layout_marginTop="5dp"
+	   		    android:layout_marginLeft="10dp" 
+	   		    android:inputType="textEmailAddress"
+	   		    android:hint="@string/edt_email_text"
+	   		    android:layout_marginRight="10dp"/> 	
+	   		    <!-- 城市 -->
+	 	<EditText 
+	   		    android:id="@+id/edt_city"
+	   		    android:layout_width="match_parent"
+	   		    android:layout_height="wrap_content"
+	   		    android:drawableLeft="@drawable/icons_inform_city"
+	   		    android:background="@android:drawable/edit_text"
+	   		    android:layout_marginTop="5dp"
+	   		    android:layout_marginLeft="10dp" 
+	   		    android:inputType="text"
+	   		    android:hint="@string/edt_city_text"
+	   		    android:layout_marginRight="10dp"/> 	
+	   		    
+	 	<!-- 分割线 -->
+		 	<LinearLayout 
+		        android:id="@+id/divide"
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:layout_marginLeft="10dp"
+		        android:layout_marginRight="10dp"
+		        android:orientation="horizontal"
+		        android:background="@color/red"
+		        android:layout_marginTop="10dp"/>
+		 	<!-- 步长 -->
+		 	<EditText 
+	   		    android:id="@+id/edt_stepLength"
+	   		    android:layout_width="match_parent"
+	   		    android:layout_height="wrap_content"
+	   		    android:drawableLeft="@drawable/icons_inform_foot"
+	   		    android:background="@android:drawable/edit_text"
+	   		    android:layout_marginTop="5dp"
+	   		    android:layout_marginLeft="10dp" 
+	   		    android:inputType="number"
+	   		    android:hint="@string/edt_stepLength_text"
+	   		    android:layout_marginRight="10dp"/> 	
+	       <!-- 身高 -->
+  		 	<EditText 
+	   		    android:id="@+id/edt_height"
+	   		    android:layout_width="match_parent"
+	   		    android:layout_height="wrap_content"
+	   		    android:drawableLeft="@drawable/icons_inform_height"
+	   		    android:background="@android:drawable/edit_text"
+	   		    android:layout_marginTop="5dp"
+	   		    android:layout_marginLeft="10dp" 
+	   		    android:hint="@string/edt_height_text"
+	   		     android:inputType="number"
+	   		    android:layout_marginRight="10dp"/> 	
+	   		    <!-- 体重 -->
+		 	<EditText 
+	   		    android:id="@+id/edt_weight"
+	   		    android:layout_width="match_parent"
+	   		    android:layout_height="wrap_content"
+	   		    android:drawableLeft="@drawable/icons_inform_weight"
+	   		    android:background="@android:drawable/edit_text"
+	   		    android:layout_marginTop="5dp"
+	   		    android:layout_marginLeft="10dp" 
+	   		     android:inputType="number"
+	   		    android:hint="@string/edt_weight_text"
+	   		    android:layout_marginRight="10dp"/> 	
+	   		    <!-- 期望运动量 -->
+		  	<EditText 
+	   		    android:id="@+id/edt_userFeatherSport"
+	   		    android:layout_width="match_parent"
+	   		    android:layout_height="wrap_content"
+	   		    android:drawableLeft="@drawable/icons_inform_excep"
+	   		    android:background="@android:drawable/edit_text"
+	   		    android:layout_marginTop="5dp"
+	   		    android:layout_marginLeft="10dp" 
+	   		    android:inputType="number"
+	   		    android:hint="@string/edt_userFeatherSport_text"
+	   		    android:layout_marginRight="10dp"/> 	
+	   		    
+		  	<TextView 
+		  	    android:layout_width="wrap_content"
+		  	    android:layout_height="wrap_content"
+		  	    android:text="@string/regist_tip_text"
+		  	    android:layout_marginTop="5dp"
+		  	    android:layout_marginLeft="10dp"
+		  	    android:layout_marginRight="10dp"/>
+	 <cn.edu.bzu.util.RevealLayout
+			 android:layout_width="match_parent"
+			 android:layout_height="wrap_content" > 
+	   		<Button 
+	   		    android:id="@+id/btn_regist"
+	   		    android:layout_width="match_parent"
+	   		    android:layout_height="wrap_content"
+	   		    android:text="@string/edt_regist_text"
+	   		    android:background="@drawable/btn_select"
+	   		    android:layout_marginLeft="10dp"
+	   		    android:layout_marginRight="10dp"
+	   		    android:layout_marginBottom="10dp"
+	   		    android:layout_marginTop="5dp"/>
+	 </cn.edu.bzu.util.RevealLayout>
+	   	</LinearLayout>
+	   
+</ScrollView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 按钮点击和不点击的效果
+        属性：
+        android:state_pressed：
+        false：未按下
+        true：按下 -->
+   <item android:drawable="@drawable/loginout_btn_shape" android:state_pressed="false"/>
+   <item android:drawable="@drawable/loginout_btn_shape_after" android:state_pressed="true"/>
+
+</selector>

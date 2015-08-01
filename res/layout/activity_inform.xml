@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/inform_bg">
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5">
+      <com.makeramen.roundedimageview.RoundedImageView
+		        xmlns:app="http://schemas.android.com/apk/res-auto"
+		        android:id="@+id/img_user_getPhoto"
+		        android:layout_width="80dp"
+		        android:layout_height="80dp"
+		        app:riv_corner_radius="30dip"
+		        app:riv_border_width="2dip"
+		        app:riv_border_color="#333333"
+		        android:layout_marginTop="20dp"
+		        android:layout_centerHorizontal="true"
+		        app:riv_mutate_background="true"
+		        android:src="@drawable/test_photo"
+		        app:riv_oval="true" />
+      
+      	<TextView 
+      	    android:id="@+id/tv_user_getNickName"
+      	    android:layout_width="match_parent"
+      	    android:layout_height="wrap_content"
+      	    android:textSize="17sp"
+      	    android:gravity="center_horizontal"
+      	    android:layout_below="@id/img_user_getPhoto"
+      	    android:layout_marginTop="10dp"/>
+      	
+      	<TextView 
+      	    android:id="@+id/tv_user_getCity"
+      	    android:layout_width="match_parent"
+      	    android:layout_height="wrap_content"
+      	    android:gravity="center_horizontal"
+      	    android:layout_below="@id/tv_user_getNickName"
+      	    android:layout_marginTop="5dp"/>
+	</RelativeLayout>
+
+    <!-- 个人基本信息 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4.50"
+        android:background="#60ffffff" 
+        android:orientation="vertical">
+      	
+            <TextView 
+                android:id="@+id/tv_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_label_text"
+                android:textColor="@color/slategray"
+                android:layout_margin="15dp"/>
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView 
+                    android:id="@+id/tv_user_getStepLength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/label_shape"/>
+                
+                  <TextView 
+	                    android:id="@+id/tv_user_getheight"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:padding="5dp"
+	                    android:layout_marginLeft="10dp"
+	                    android:background="@drawable/label_shape"/>
+                  
+                    <TextView 
+	                    android:id="@+id/tv_user_getWeight"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:padding="5dp"
+	                    android:layout_marginLeft="10dp"
+	                    android:background="@drawable/label_shape"/>
+                    
+                      <TextView 
+	                    android:id="@+id/tv_user_getFeather"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:padding="5dp"
+	                    android:layout_marginLeft="10dp"
+	                    android:background="@drawable/label_shape"/>
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/drivide_shape"/>
+		<!-- 账号 -->
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"
+                    android:text="@string/tv_userName"/>
+                <TextView 
+                    android:id="@+id/tv_user_getUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="20dp"/>
+            </LinearLayout>
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/drivide_shape"/>
+            <!-- 座右铭 -->
+           <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"
+                    android:text="@string/tv_motto"/>
+                <TextView 
+                    android:id="@+id/tv_user_getMotto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="35dp"/>
+            </LinearLayout>
+            
+          <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/drivide_shape"/>
+                  <!-- 邮箱 -->
+           <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"
+                    android:text="@string/tv_email"/>
+   		   <TextView 
+                    android:id="@+id/tv_user_getEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="20dp"/>
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/drivide_shape"/>
+            
+   </LinearLayout>
+
+          <cn.edu.bzu.util.RevealLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content" 
+			        android:layout_gravity="bottom" 
+			        android:background="#60ffffff"> 
+		    <Button 
+		        android:id="@+id/edt_updateInform"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/btn_select"
+		        android:layout_margin="5dp"
+		        android:text="@string/btn_updateInform_text"/>
+	    </cn.edu.bzu.util.RevealLayout>
+</LinearLayout>

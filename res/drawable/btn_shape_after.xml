@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+  	<!-- 
+  	solid：填充色
+  	corners:边角的弧度 -->
+    <solid 
+        android:color="#87cefa"/>
+    <corners 
+        android:radius="10dp"/>
+
+</shape>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/_bg_forget">
+    
+    <LinearLayout 
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+	    <include
+	         layout="@layout/common_layout_title_bar"
+	         android:id="@+id/common_layout_bar"/>
+	</LinearLayout>
+	
+	<TextView 
+	    android:id="@+id/tips"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/forget_tips"
+	    android:textColor="@color/red"
+	    android:textSize="15sp"
+	    android:layout_below="@id/title"
+	    android:layout_marginLeft="10dp"
+	    android:layout_marginTop="10dp"/>
+	
+	<EditText 
+	    android:id="@+id/edt_forget_email"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@android:drawable/edit_text"
+	    android:drawableLeft="@drawable/icons_inform_email"
+	    android:layout_marginTop="15dp"
+	    android:layout_marginLeft="10dp"
+	    android:inputType="textEmailAddress"
+	    android:layout_marginRight="10dp"
+	    android:hint="@string/forget_email"
+	    android:layout_below="@id/tips"/>
+	
+	<cn.edu.bzu.util.RevealLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_forget_email">
+
+        <Button
+            android:id="@+id/btn_forget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_select"
+            android:text="@string/btn_forget_title" />
+    </cn.edu.bzu.util.RevealLayout>
+
+</RelativeLayout>

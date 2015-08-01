@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <cn.edu.bzu.walker.SlideMenu
+        android:id="@+id/slide_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <include
+             android:id="@+id/ly_menuview"
+              layout="@layout/left_menu" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+               android:orientation="vertical">
+
+            <include layout="@layout/layout_title_bar" />
+
+            <FrameLayout 
+                 android:id="@+id/content_frame"
+                  android:layout_width="fill_parent"
+     			  android:layout_height="fill_parent"
+     			  android:background="@drawable/test_main_bg"/>
+       </LinearLayout>
+ </cn.edu.bzu.walker.SlideMenu>
+
+</RelativeLayout>

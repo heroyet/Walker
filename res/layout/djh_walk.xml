@@ -1,0 +1,199 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icons_sport_bg" >
+<include 
+        android:id="@+id/sport_title"
+        layout="@layout/sport_common_layout_title_bar"/>
+    <RelativeLayout
+        android:id="@+id/distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 记录路程的数据 -->
+
+        <TextView
+            android:id="@+id/step_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="25dp"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="100sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/step_value"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/step_value"
+            android:text="步"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <!-- 运动的记录信息 -->
+
+    <LinearLayout
+        android:id="@+id/sport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/distance"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal" >
+
+        <!-- 用时 -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/icons_sport_time" />
+
+            <Chronometer
+                android:id="@+id/chronometer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:format="%s"
+                android:textColor="#00FF00"
+                android:textSize="15sp" />
+            <!--
+                 <TextView 
+                android:id="@+id/desired_pace_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:01:10"
+                android:textSize="15sp"
+                 android:layout_marginBottom="5dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#FFFFFF"/>
+            -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="用时"
+                android:textColor="#6E7076"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <!-- 速度 -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/icons_sport_speed" />
+
+            <TextView
+                android:id="@+id/speed_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:text=" 0 "
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="配速(分钟/公里)"
+                android:textColor="#6E7076"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <!-- 步频 -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/icons_sport_run" />
+
+            <TextView
+                android:id="@+id/pace_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="3dp"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="步频率(步/分钟)"
+                android:textColor="#6E7076"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_below="@id/sport" >
+
+        <TextView
+            android:id="@+id/sport_start"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/sport_start_select"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="开始"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/start" 
+         android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/shangchuan"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="上传数据"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</RelativeLayout>

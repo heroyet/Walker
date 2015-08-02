@@ -81,24 +81,17 @@
     <string name="answer_first">A:这款软件主要有：用户登录，运动测试，个人信息，行程记录，行程笔记，天气查询，健康栏目以及关于软件设置等功能模块。</string>
     <string name="question_second">Q：这款软件应该如何使用呢？</string>
     <string name="answer_second">A：打开该软件，如果你是新用户将首先进行注册，如果已有帐号，直接登录即可。</string>
-    <string name="question_third">Q:那登录之后应该怎样继续操作呢？</string>
-    <string name="answer_third">A:登录该软件后，新用户首先应该更换自己的头像，然后填写自己的个人信息，填好之后，确定。</string>
     <string name="question_four">Q:对于运动测试，用户应该如何进行测试呢？</string>
-    <string name="answer_four">A:用户可以根据自己想要测试的类别，有骑行，步行等。选择相应类别之后，点击开始。</string>
+    <string name="answer_four">A:用户可以根据自己想要测试的类别，有心率，步行等。选择相应类别之后，点击开始。</string>
     <string name="question_five">Q:这个行程记录是做什么的呢？</string>
     <string name="answer_five">A:行程记录这个部分，当用户选择合适的运动类型之后，点击开始，该软件将会对用户的运动记录实时记录，还能对用户进行一些定位等操作。</string>
     <string name="question_six">Q:还能对用户进行定位，这么厉害！看起来这个软件不错奥。那下面的天气查询，查询的是真实的天气么？</string>
     <string name="answer_six">A:当然，当用户输入查询天气的名称，点击查询，软件就会自动对输入的城市进行天气查询，并查询出一周的天气情况。</string>
-    <string name="question_seven">Q:还能对用户进行定位，这么厉害！看起来这个软件不错奥。那下面的天气查询，查询的是真实的天气么？</string>
-    <string name="answer_seven">A:当然，当用户输入查询天气的名称，点击查询，软件就会自动对输入的城市进行天气查询，并查询出一周的天气情况。</string>
     <string name="question_eight">Q:我看下面还有一个软件设置，这里面主要包含哪些呢？</string>
     <string name="answer_eight">A:软件设置模块主要有使用说明，团队介绍，版本信息，版本更新，以及意见反馈等。</string>
-    <string name="question_night">Q:版本更新？还能进行版本更新？</string>
-    <string name="answer_night">A:对呀，如果用户需要进行版本更新，可以进行软件的更新操作的。</string>
-    <string name="question_ten">Q:这么厉害的软件，现在让我们一起了解使用这个软件吧。</string>
     <string name="team_intro">"        我们每一个成员，都经过国家安全指标筛选，请用户放心使用Walker，不会掉节操"</string>
     <string name="soft_name">Walker</string>
-    <string name="soft_version">Ver 1.0</string>
+    <string name="soft_version">Ver 1.1</string>
     <string name="soft_url">mywalk.bmob.cn</string>
     <string name="soft_power">Powered     by      niZhan</string>
     <string name="left_menu_sport_test_text">运动测试</string>
@@ -234,5 +227,19 @@
     <string name="note_tips_text">请在此处输入标题</string>
 
     <string name="note_content_text">请在此处输入内容</string>
+
+    <string name="team_monster_text">程序猿:monster</string>
+
+    <string name="team_djh_text">程序猿 : djh</string>
+
+    <string name="team_lb_text">程序猿 : lb</string>
+
+    <string name="team_cherish_text">设计狮 : cherish</string>
+
+    <string name="team_sf_text">指导教师 : sf</string>
+
+    <string name="team_resen_text">技术支持 : R·Sen</string>
+
+    <string name="start_go">" Go "</string>
     
 </resources>

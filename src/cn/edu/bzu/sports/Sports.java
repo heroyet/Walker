@@ -13,6 +13,7 @@ import com.baidu.location.LocationClientOption.LocationMode;
 import cn.edu.bzu.customercontrol.MyProgressDialog;
 import cn.edu.bzu.note.NoteMain;
 import cn.edu.bzu.util.GetWeatherByCity;
+import cn.edu.bzu.util.TestNetWork;
 import cn.edu.bzu.walker.R;
 import djh.bzu.sport.pedometer.Pedometer;
 import djh.bzu.xinlv.xinlvActivity;
@@ -48,6 +49,8 @@ public class Sports extends  Fragment implements OnClickListener{
 	private String city;
 	
 	private MyProgressDialog myProgressDialog;
+	
+	public Boolean isNet; //检测网络连接
 	/**
 	 *聚合天气相关数据
 	 */
@@ -66,10 +69,16 @@ public class Sports extends  Fragment implements OnClickListener{
 	public void onViewCreated(View view, Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
 		init(view);
-		myProgressDialog.initDialog();  //加载进度条
-		getCityByLocation();
-		locationClient.start();
-		locationClient.requestLocation();
+		isNet=new TestNetWork().isNetworkAvailable(context);
+		//Log.e("---------------->>>",""+isNet);
+		if(isNet){
+			myProgressDialog.initDialog();  //加载进度条
+			getCityByLocation();
+			locationClient.start();
+			locationClient.requestLocation();
+		}else {
+			Toast.makeText(context, "无网络连接", Toast.LENGTH_SHORT).show();
+		}
 	}
 
 	private void queryCityWeather() {

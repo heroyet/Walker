@@ -11,8 +11,8 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
-import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import cn.edu.bzu.adapter.ViewPagerAdapter;
 
 /**
@@ -26,8 +26,8 @@ public class OurViewPager extends Activity implements OnPageChangeListener  {
 	private ViewPager viewPager;
 	private List<View> viewList;
 	private View view1,view2,view3,view4;
-	private Button btnFinish;
 	
+	private TextView go;
 	private ViewPagerAdapter adapter;
 	
 	//TODO 新建
@@ -57,14 +57,15 @@ public class OurViewPager extends Activity implements OnPageChangeListener  {
 		view2 = View.inflate(this, R.layout.view2_of_pager, null);
 		view3 = View.inflate(this, R.layout.view3_of_pager, null);
 		view4 = View.inflate(this, R.layout.view4_of_pager, null);
-		btnFinish = (Button) view4.findViewById(R.id.btnFinish);
 		
-		btnFinish.setOnClickListener(new OnClickListener() {
+		go=(TextView) view4.findViewById(R.id.go);
+		go.setOnClickListener(new OnClickListener() {
 			
 			@Override
-			public void onClick(View arg0) {
+			public void onClick(View v) {
 				Intent i = new Intent(OurViewPager.this, MainActivity.class);
 				startActivity(i);
+				finish(); //销毁掉当前页面
 			}
 		});
 		

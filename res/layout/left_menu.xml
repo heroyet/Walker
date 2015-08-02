@@ -1,250 +1,289 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-       android:id="@+id/ly_menuview2"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ly_menuview2"
     android:layout_width="200dp"
-    android:layout_height="match_parent" 
-    android:orientation="vertical"
-    android:background="@drawable/bitmap_book_read_chapterlist_repeat" >
+    android:layout_height="match_parent"
+    android:background="@drawable/bitmap_book_read_chapterlist_repeat"
+    android:orientation="vertical" >
 
-<RelativeLayout 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-	<com.makeramen.roundedimageview.RoundedImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/img_user_photo"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/test_photo"
-        app:riv_corner_radius="30dip"
-        app:riv_border_width="2dip"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
-        app:riv_border_color="#333333"
-        app:riv_mutate_background="true"
-        app:riv_oval="true" />
-	<TextView 
-	    android:id="@+id/tv_user_text"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="@string/left_menu_user_test_text"
-	    android:textSize="15sp"
-	    android:layout_marginTop="20dp"
-	    android:layout_marginLeft="15dp"
-	    android:textColor="@color/whitesmoke"
-	    android:layout_toRightOf="@id/img_user_photo"/>
-	
-		<TextView 
-	    android:id="@+id/tv_user_motto"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="@string/left_menu_motto_test_text"
-	    android:textColor="@color/whitesmoke"
-	    android:layout_below="@id/tv_user_text"
-	    android:layout_marginLeft="15dp"
-	    android:layout_marginTop="5dp"
-	    android:layout_toRightOf="@id/img_user_photo"/>
-	</RelativeLayout>
-	
-	<!-- 用户登录 -->
-	<LinearLayout 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img_user_photo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/test_photo"
+            app:riv_border_color="#333333"
+            app:riv_border_width="2dip"
+            app:riv_corner_radius="30dip"
+            app:riv_mutate_background="true"
+            app:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/tv_user_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/img_user_photo"
+            android:text="@string/left_menu_user_test_text"
+            android:textColor="@color/whitesmoke"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_user_motto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_user_text"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/img_user_photo"
+            android:text="@string/left_menu_motto_test_text"
+            android:textColor="@color/whitesmoke" />
+    </RelativeLayout>
+
+    <!-- 用户登录 -->
+
+    <LinearLayout
         android:id="@+id/ly_column_login"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:clickable="true"
         android:layout_marginTop="15dp"
-        android:orientation="horizontal">
-        <ImageView 
+        android:clickable="true"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables" >
+
+        <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
             android:contentDescription="@string/left_menu_photo_test_text"
-            android:src="@drawable/icons_column_login"/>
+            android:src="@drawable/icons_column_login" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:textColor="#ff959595"
             android:layout_marginLeft="7dp"
             android:layout_marginTop="5dp"
-            android:text="@string/left_menu_login_test_text" />
+            android:text="@string/left_menu_login_test_text"
+            android:textColor="#ff959595" />
     </LinearLayout>
-     <View 
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="0.5dp"
         android:layout_marginLeft="15dp"
-        android:background="@color/white"/>
+        android:layout_marginTop="5dp"
+        android:background="@color/white" />
     <!-- 运动测试 -->
-    <LinearLayout 
+
+    <LinearLayout
         android:id="@+id/ly_column_sport"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:clickable="true"
-        android:orientation="horizontal">
-        <ImageView 
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables" >
+
+        <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
             android:contentDescription="@string/left_menu_sport_test_text"
-            android:src="@drawable/icons_column_sport"/>
+            android:src="@drawable/icons_column_sport" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:textColor="#ff959595"
             android:layout_marginLeft="7dp"
             android:layout_marginTop="5dp"
-            android:text="@string/left_menu_sport_test_text" />
+            android:text="@string/left_menu_sport_test_text"
+            android:textColor="#ff959595" />
     </LinearLayout>
-    <View 
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="0.5dp"
         android:layout_marginLeft="15dp"
-        android:background="@color/white"/>
-    
-        <!-- 个人信息 -->
-    <LinearLayout 
+        android:layout_marginTop="5dp"
+        android:background="@color/white" />
+
+    <!-- 个人信息 -->
+
+    <LinearLayout
         android:id="@+id/ly_column_inform"
         android:layout_width="match_parent"
-        android:clickable="true"
         android:layout_height="40dp"
-        android:orientation="horizontal">
-        <ImageView 
+        android:clickable="true"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables" >
+
+        <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
             android:contentDescription="@string/left_menu_inform_test_text"
-            android:src="@drawable/icons_column_inform"/>
+            android:src="@drawable/icons_column_inform" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:textColor="#ff959595"
             android:layout_marginLeft="7dp"
             android:layout_marginTop="5dp"
-            android:text="@string/left_menu_inform_test_text" />
+            android:text="@string/left_menu_inform_test_text"
+            android:textColor="#ff959595" />
     </LinearLayout>
-    <View 
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="0.5dp"
         android:layout_marginLeft="15dp"
-        android:background="@color/white"/>
-    
-        <!-- 行程记录 -->
-    <LinearLayout 
+        android:layout_marginTop="5dp"
+        android:background="@color/white" />
+
+    <!-- 行程记录 -->
+
+    <LinearLayout
         android:id="@+id/ly_column_history"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:clickable="true"
-        android:orientation="horizontal">
-        <ImageView 
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables" >
+
+        <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
             android:contentDescription="@string/left_menu_user_history_text"
-            android:src="@drawable/icons_column_history"/>
+            android:src="@drawable/icons_column_history" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:textColor="#ff959595"
             android:layout_marginLeft="7dp"
             android:layout_marginTop="5dp"
-            android:text="@string/left_menu_user_history_text" />
+            android:text="@string/left_menu_user_history_text"
+            android:textColor="#ff959595" />
     </LinearLayout>
-    <View 
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="0.5dp"
         android:layout_marginLeft="15dp"
-        android:background="@color/white"/>
-    
-        <!-- 天气查询 -->
-    <LinearLayout 
+        android:layout_marginTop="5dp"
+        android:background="@color/white" />
+
+    <!-- 天气查询 -->
+
+    <LinearLayout
         android:id="@+id/ly_column_weather"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:clickable="true"
-        android:orientation="horizontal">
-        <ImageView 
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables" >
+
+        <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
             android:contentDescription="@string/left_menu_weather_test_text"
-            android:src="@drawable/icons_column_weather"/>
+            android:src="@drawable/icons_column_weather" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:textColor="#ff959595"
             android:layout_marginLeft="7dp"
             android:layout_marginTop="5dp"
-            android:text="@string/left_menu_weather_test_text" />
+            android:text="@string/left_menu_weather_test_text"
+            android:textColor="#ff959595" />
     </LinearLayout>
-    <View 
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="0.5dp"
         android:layout_marginLeft="15dp"
-        android:background="@color/white"/>
-    
-        <!-- 健康栏目 -->
-    <LinearLayout 
+        android:layout_marginTop="5dp"
+        android:background="@color/white" />
+
+    <!-- 健康栏目 -->
+
+    <LinearLayout
         android:id="@+id/ly_column_health"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:clickable="true"
-        android:orientation="horizontal">
-        <ImageView 
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables" >
+
+        <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
             android:contentDescription="@string/left_menu_health_test_text"
-            android:src="@drawable/icons_column_health"/>
+            android:src="@drawable/icons_column_health" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:textColor="#ff959595"
             android:layout_marginLeft="7dp"
             android:layout_marginTop="5dp"
-            android:text="@string/left_menu_health_test_text" />
+            android:text="@string/left_menu_health_test_text"
+            android:textColor="#ff959595" />
     </LinearLayout>
-    <View 
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="0.5dp"
         android:layout_marginLeft="15dp"
-        android:background="@color/white"/>
-    
-        <!-- 软件设置 -->
-    <LinearLayout 
+        android:layout_marginTop="5dp"
+        android:background="@color/white" />
+
+    <!-- 软件设置 -->
+
+    <LinearLayout
         android:id="@+id/ly_column_setting"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:clickable="true"
-        android:orientation="horizontal">
-        <ImageView 
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables" >
+
+        <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
             android:contentDescription="@string/left_menu_setting_test_text"
-            android:src="@drawable/icons_column_setting"/>
+            android:src="@drawable/icons_column_setting" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:textColor="#ff959595"
             android:layout_marginLeft="7dp"
             android:layout_marginTop="5dp"
-            android:text="@string/left_menu_setting_test_text" />
+            android:text="@string/left_menu_setting_test_text"
+            android:textColor="#ff959595" />
     </LinearLayout>
-    <View 
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="0.5dp"
         android:layout_marginLeft="15dp"
-        android:background="@color/white"/>
+        android:layout_marginTop="5dp"
+        android:background="@color/white" />
+
 </LinearLayout>

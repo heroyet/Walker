@@ -170,15 +170,14 @@
 			        android:layout_gravity="bottom" 
 			        android:layout_marginLeft="10dp" 
 			        android:layout_marginRight="10dp"
-			        android:layout_alignParentBottom="true"
-			        android:background="#60ffffff"> 
+			        android:layout_marginBottom="10dp"
+			        android:layout_alignParentBottom="true"> 
 				<Button 
 				    android:id="@+id/loginout"
 				    android:layout_width="match_parent"
 				    android:layout_height="wrap_content"
 				    android:text="@string/soft_loginout_text"
 				    android:textColor="@color/white"
-				    android:background="@drawable/loginout_btn_select"
-				    android:layout_marginBottom="10dp"/>
+				    android:background="@drawable/loginout_btn_select"/>
 		</cn.edu.bzu.util.RevealLayout>
 </RelativeLayout>

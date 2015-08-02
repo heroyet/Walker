@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/pink">
-    
-	
-    
-    
-    <Button 
-        android:id="@+id/btnFinish"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="正式开始"/>
-</LinearLayout>
+    android:background="@drawable/guide_4">
+  
+    <TextView 
+        android:id="@+id/go"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="@string/start_go"
+        android:textSize="20sp"
+        android:clickable="true"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/sport_start_select"
+        android:textColor="#FFFFFF"/>
+</RelativeLayout>

@@ -4,7 +4,7 @@
     android:useLevel="false" >
     	
     <!-- 被选中 -->
-    <solid android:color="@color/white"/>
+    <solid android:color="#427AB7"/>
     <size android:width="8dp"
         android:height="8dp"/>
     

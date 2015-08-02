@@ -83,6 +83,8 @@ public class Regist extends BaseActivity implements OnClickListener{
 		Validate motto=new Validate(edt_motto);
 		Validate city=new Validate(edt_city);
 		
+		Validate email=new Validate(edt_email);
+		
 		Validate stepLength=new Validate(edt_stepLength);
 		Validate height=new Validate(edt_height);
 		Validate weight=new Validate(edt_weight);
@@ -94,6 +96,7 @@ public class Regist extends BaseActivity implements OnClickListener{
 		motto.addValidator(notEmptyValidator);
 		city.addValidator(notEmptyValidator);
 		
+		email.addValidator(notEmptyValidator);
 		stepLength.addValidator(notEmptyValidator);
 		height.addValidator(notEmptyValidator);
 		weight.addValidator(notEmptyValidator);
@@ -105,8 +108,8 @@ public class Regist extends BaseActivity implements OnClickListener{
 		 */
 		
 		EmailValidator emailValidator=new EmailValidator(this);
-		Validate email=new Validate(edt_email);
-		email.addValidator(emailValidator);
+		Validate email_=new Validate(edt_email);
+		email_.addValidator(emailValidator);
 		
 		
 	/**
@@ -184,6 +187,7 @@ public class Regist extends BaseActivity implements OnClickListener{
 			}else {
 				//验证失败
 				Toast.makeText(this, "亲，请正确填写用户信息，么么哒", Toast.LENGTH_SHORT).show();
+				myProgressDialog.colseDialog();
 			}
 			
 			break;
@@ -224,7 +228,8 @@ public class Regist extends BaseActivity implements OnClickListener{
 			public void onFailure(int i, String s) {
 				//数据上传失败
 				//Log.e("--->", "数据上传失败"+s);
-				Toast.makeText(Regist.this, "注册失败",Toast.LENGTH_SHORT).show();
+				Toast.makeText(Regist.this, "注册失败，请正确填写用户信息",Toast.LENGTH_SHORT).show();
+				myProgressDialog.colseDialog();
 			}
 		});
 		

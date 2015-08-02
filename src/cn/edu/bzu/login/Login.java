@@ -90,8 +90,16 @@ public class Login extends Fragment implements OnClickListener,SwichLayoutInterF
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btn_login:
-			geetestLib.setCaptchaId(captcha_id);
-			new GtAppDlgTask().execute(); //开启极验验证的异步线程
+			//验证思路： 
+			String user=edt_user.getText().toString();
+			String pass=edt_pass.getText().toString();
+			if(TextUtils.isEmpty(user)||TextUtils.isEmpty(pass)){
+				Toast.makeText(context, "账号或密码未填写=_=", Toast.LENGTH_SHORT).show();
+			}else{
+				geetestLib.setCaptchaId(captcha_id);
+				new GtAppDlgTask().execute(); //开启极验验证的异步线程
+				
+			}
 			break;
 		case R.id.btn_regist:
 				//此处书写注册的 相关操作
@@ -106,7 +114,39 @@ public class Login extends Fragment implements OnClickListener,SwichLayoutInterF
 		}
 	}
 	
-	
+	/**
+	 * TODO 校验登录
+	 */
+	private void checkLogin() {
+
+		String user=edt_user.getText().toString();
+		String pass=edt_pass.getText().toString();
+		
+		 	final WalkerUser walkerUser=new WalkerUser();
+		 	walkerUser.setUsername(user);
+		 	walkerUser.setPassword(pass);
+			 walkerUser.login(context, new SaveListener() {
+				
+				@Override
+				public void onSuccess() {
+					//注意：邮箱验证
+				
+						Toast.makeText(context,"登录成功",Toast.LENGTH_SHORT).show();
+						 
+						MainActivity  mainActivity=(MainActivity) getActivity();
+						mainActivity.firstEnter();
+						mainActivity.showUserInform();
+				}
+				
+				@Override
+				public void onFailure(int i, String error) {
+					 Toast.makeText(context,"登录失败"+error,Toast.LENGTH_SHORT).show();
+				}
+			});
+		
+	}
+
+
 	/**
 	 * 极验验证异步后台操作
 	 * @author monster
@@ -130,6 +170,7 @@ public class Login extends Fragment implements OnClickListener,SwichLayoutInterF
 				openGtTest(sdkInitData);
 
 			} else {
+				
 			}
 		}
 	}
@@ -143,40 +184,7 @@ public class Login extends Fragment implements OnClickListener,SwichLayoutInterF
 			@Override
 			public void gtResult(boolean success, String result) {
 				if (success) {
-
-					String user=edt_user.getText().toString();
-					String pass=edt_pass.getText().toString();
-					
-					if(TextUtils.isEmpty(user)||TextUtils.isEmpty(pass)){
-						Toast.makeText(context, "账号或密码未填写=_=", Toast.LENGTH_SHORT).show();
-					}else{
-					 	final WalkerUser walkerUser=new WalkerUser();
-					 	walkerUser.setUsername(user);
-					 	walkerUser.setPassword(pass);
-						 walkerUser.login(context, new SaveListener() {
-							
-							@Override
-							public void onSuccess() {
-								//注意：邮箱验证
-							
-								if(walkerUser.getEmailVerified()){
-									Toast.makeText(context,"登录成功",Toast.LENGTH_SHORT).show();
-									 
-									MainActivity  mainActivity=(MainActivity) getActivity();
-									mainActivity.firstEnter();
-									mainActivity.showUserInform();
-								}else{
-									Toast.makeText(context, "亲，快去您的邮箱进行验证吧", Toast.LENGTH_SHORT).show();
-								}
-							}
-							
-							@Override
-							public void onFailure(int i, String error) {
-								 Toast.makeText(context,"登录失败"+error,Toast.LENGTH_SHORT).show();
-							}
-						});
-					}
-
+					checkLogin();
 				} else {
 					// TODO 验证失败
 					Toast.makeText(context, "验证失败", Toast.LENGTH_SHORT).show();
